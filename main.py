@@ -597,7 +597,12 @@ if __name__ == "__main__":
 
     # send_sms(json_string)
     # send_telegram_message(create_openai_message(json_string))
-    send_telegram_message(json_string)
+    # send_telegram_message(json_string)
+    msg = """
+Score: {score}
+Meaning: "https://github.com/njligames/mortgage_dashboard/tree/main/real_estate_score#interpretation-of-the-score"
+    """
+    send_telegram_message(msg)
     print(json_string)
 
     # print(engine.run_airdna("Miami"))
