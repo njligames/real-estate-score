@@ -593,11 +593,11 @@ if __name__ == "__main__":
 
     score = interpret_score(engine.run_fred())
     score['meaning'] = "https://github.com/njligames/mortgage_dashboard/tree/main/real_estate_score#interpretation-of-the-score"
-    json_string = json.dumps(score, indent=4,sort_keys=True)
+    json_string = json.dumps(score, indent=4)
 
     # send_sms(json_string)
-    send_telegram_message(create_openai_message(json_string))
-    # send_telegram_message(json_string)
+    # send_telegram_message(create_openai_message(json_string))
+    send_telegram_message(json_string)
     print(json_string)
 
     # print(engine.run_airdna("Miami"))
