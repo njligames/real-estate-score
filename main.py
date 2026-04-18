@@ -600,7 +600,8 @@ if __name__ == "__main__":
     # send_telegram_message(json_string)
     msg = f"""
 Score: {_s}
-Meaning: "https://github.com/njligames/mortgage_dashboard/tree/main/real_estate_score#interpretation-of-the-score"
+Meaning: https://github.com/njligames/mortgage_dashboard/tree/main/real_estate_score#interpretation-of-the-score
+Mortgage: https://mortgage-dashboard-p3xc.onrender.com/
     """
     send_telegram_message(msg)
     print(json_string)
