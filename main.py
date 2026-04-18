@@ -590,16 +590,16 @@ if __name__ == "__main__":
         fred_api_key=FRED_API_KEY,
         airdna_api_key=AIRDNA_API_KEY
     )
-
-    score = interpret_score(engine.run_fred())
+    _s = engine.run_fred()
+    score = interpret_score(_s)
     score['meaning'] = "https://github.com/njligames/mortgage_dashboard/tree/main/real_estate_score#interpretation-of-the-score"
     json_string = json.dumps(score, indent=4)
 
     # send_sms(json_string)
     # send_telegram_message(create_openai_message(json_string))
     # send_telegram_message(json_string)
-    msg = """
-Score: {score}
+    msg = f"""
+Score: {_s}
 Meaning: "https://github.com/njligames/mortgage_dashboard/tree/main/real_estate_score#interpretation-of-the-score"
     """
     send_telegram_message(msg)
