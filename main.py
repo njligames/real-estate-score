@@ -1,3 +1,4 @@
+import sys
 import requests
 import pandas as pd
 import numpy as np
@@ -176,3 +177,4 @@ Dashboard: <a href="https://mortgage-dashboard-p3xc.onrender.com/">View Dashboar
 
     except Exception as e:
         print(f"Workflow failed after retries: {e}")
+        sys.exit(1)
